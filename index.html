@@ -30,9 +30,7 @@
     let xAxisLabel = 'TK label';
     let yAxisLabel = 'TK label';
     let sourceText = 'Source TK';
-    // let defaultTooltip = "default tooltip text";
-    // let scaledButtonText = "Scaled by _______";
-    // let unscaledButtonText = "Equal _______";
+    
     //tooltip will populate whatever is in the column 'name' --> edit on line 168
     //to change axis value labels, edit lines 71-102
     //edit TICK FORMAT on line 132
@@ -44,9 +42,6 @@
       right: 50,
       bottom: 50
     };
-
-    //set the default of the charge to not be scaled
-    // var scaledByRadialColumn = false;
 
     //declare the inner width of just the chart (just call it width) and define it in relation to the margins we made
     var width = outerWidth - margin.left - margin.right,
@@ -207,54 +202,15 @@
         .attr('stroke-width', '3')
         .style("opacity", 1)
         div.text(d.name+' laughed TK times at a volume of TK')
-        // div.html(function(d){
-        //   return (d.name +' organizations made up)
-        // }) if you absolutely must style numbers differently
         .style("left", (d3.event.pageX -20) + "px")
                 .style("top",(d3.event.pageY ) + "px");
   })
-
-
-
-
-      // var button = d3.select("body").append("button");
-
-      // if (scaledByRadialColumn) {
-      //   button.text(unscaledButtonText);
-      // } else {
-      //   button.text(scaledButtonText);
-      // }
-      //
-      // button.on("click", function() {
-      //   // Flip true to false or false to true
-      //   scaledByRadialColumn = !scaledByRadialColumn;
-      //
-      //   if (scaledByRadialColumn) {
-      //     button.text(unscaledButtonText);
-      //   } else {
-      //     button.text(scaledButtonText);
-      //   }
-      //
-      //   circles
-      //     .transition()
-      //     .duration(1000)
-      //     .attr("r", function(d) {
-      //       if (scaledByRadialColumn) {
-      //         return radiusScale(d.radialColumn);
-      //       } else {
-      //         return 3;
-      //       }
-      //     });
-      //
-      //
-      // });
 
       var sourceLabel = d3.select("body")
           .append("div")
           .attr("class", "sourceLabel")
           .text(sourceText)
-
     });
-    // });
+
   </script>
 </body>
